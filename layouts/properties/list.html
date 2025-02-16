@@ -1,0 +1,23 @@
+{{ define "main" }}
+
+<main class="container py-5">
+
+  <div class="text-center mb-5">
+    <h1 class="display-4 fw-bold mb-3">All Properties</h1>
+    <p class="lead text-muted">Explore our curated collection of premium properties</p>
+  </div>
+
+
+  <!-- Property Grid -->
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    {{ range .Site.RegularPages }}
+      {{ if eq .Section "properties" }}
+        <div class="col">
+          {{ partial "property-card" . }}
+        </div>
+      {{ end }}
+    {{ end }}
+  </div>
+</main>
+
+{{ end }}

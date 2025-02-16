@@ -1,0 +1,128 @@
+{{ define "main" }}
+  <main class="property-single py-5">
+    <section class="property-hero mb-6">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-8">
+            <div class="property-gallery">
+              <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  {{ range $index, $img := .Params.gallery }}
+                  <div class="carousel-item {{ if eq $index 0 }}active{{ end }}">
+                    <img src="{{ $img }}" class="d-block w-100 rounded-3" alt="Property image {{ add $index 1 }}" loading="lazy">
+                  </div>
+                  {{ end }}
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 py-5">
+            <div class="property-details-card card shadow-sm border-accent">
+              <div class="card-body">
+                <h1 class="h2 fw-bold mb-3">{{ .Title }}</h1>
+                <div class="d-flex align-items-center mb-4">
+                  <span class="price-badge bg-custom-primary text-white px-3 py-2 rounded-pill">
+                    ${{ .Params.price }}
+                  </span>
+                </div>
+
+                <div class="property-meta mb-4">
+                  <div class="row g-3">
+                    <div class="col-6">
+                      <div class="d-flex align-items-center">
+                        <i class="fas fa-map-marker-alt me-2 text-custom-primary"></i>
+                        {{ .Params.location }}
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="d-flex align-items-center">
+                        <i class="fas fa-tag me-2 text-custom-primary"></i>
+                        {{ .Params.propertyType }}
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="d-flex align-items-center">
+                        <i class="fas fa-ruler-combined me-2 text-custom-primary"></i>
+                        {{ .Params.acres }} Acres
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="d-flex align-items-center">
+                        <i class="fas fa-check-circle me-2 text-custom-primary"></i>
+                        {{ .Params.status }}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="additional-details mb-4">
+                  <div class="row g-3">
+                    <div class="col-6">
+                      <strong>APN:</strong> {{ .Params.apn }}
+                    </div>
+                    <div class="col-6">
+                      <strong>Down Payment:</strong> ${{ .Params.downPayment }}
+                    </div>
+                    <div class="col-6">
+                      <strong>Monthly Payment:</strong> ${{ .Params.monthlyPayment }}
+                    </div>
+                    <div class="col-6">
+                      <strong>Months:</strong> {{ .Params.months }}
+                    </div>
+                    <div class="col-6">
+                      <strong>No-payment Land Price Option:</strong> ${{ .Params.noPaymentsPrice }}
+                    </div>
+                  </div>
+                </div>
+
+                <div class="d-grid">
+                  <a href="#contact" class="btn btn-custom btn-lg">
+                    <i class="fas fa-phone me-2"></i>
+                    Contact Agent
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Property Description -->
+    <section class="container mb-6 py-5">
+      <div class="row">
+        <div class="col-lg-8">
+          <h2 class="h4 fw-bold mb-3">Property Description</h2>
+          <div class="property-description">
+            {{ .Content }}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Properties -->
+    <section class="bg-light py-6">
+      <div class="container">
+        <h2 class="h4 fw-bold mb-4 py-3">Related Properties</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          {{ range first 3 (where (where .Site.Pages "Type" "properties") "Title" "!=" .Title) }}
+            <div class="col">
+              {{ if .Content }}
+              {{ partial "property-card" . }}
+              {{ end }}
+            </div>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+  </main>
+{{ end }}

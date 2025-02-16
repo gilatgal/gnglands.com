@@ -1,0 +1,70 @@
+{{ define "main" }}
+
+  {{ partial "hero" . }}
+
+  <!-- Property Grid Section -->
+  <section class="container py-5">
+    <div class="text-center mb-5">
+      <h2 class="display-4 fw-bold mb-3">Featured Properties</h2>
+      <p class="lead text-muted">Curated selection of premium listings</p>
+    </div>
+
+  
+<!-- Property Grid -->
+<div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 px-2">
+  {{ $featuredProperties := where .Site.RegularPages "Params.featured" true }}
+  
+  {{ if gt (len $featuredProperties) 0 }}
+    <!-- Display Featured Properties -->
+    {{ range first 6 $featuredProperties }}
+      <div class="col">
+        {{ partial "property-card" . }}
+      </div>
+    {{ end }}
+  {{ else }}
+    <!-- Fallback to Display First 6 Properties -->
+    {{ range first 6 .Site.RegularPages }}
+      <div class="col">
+        {{ partial "property-card" . }}
+      </div>
+    {{ end }}
+  {{ end }}
+</div>
+
+
+    <div class="text-center mt-4">
+      <a href="/properties" class="btn btn-custom btn-lg text-white">View All Properties</a>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="bg-light py-5 ">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="display-4 fw-bold">{{ .Params.testimonialTitle }}</h2>
+      </div>
+      <div class="row g-4">
+        {{ range .Site.Data.testimonials }}
+        <div class="col-md-4">
+          <div class="testimonial-card bg-white p-4 rounded-3 h-100">
+            <div class="d-flex align-items-center mb-4">
+              <img src="{{ .image }}" alt="{{ .name }}" class="rounded-circle me-3" width="60">
+              <div>
+                <h5 class="mb-0">{{ .name }}</h5>
+                <small class="text-muted">{{ .position }}</small>
+              </div>
+            </div>
+            <div class="testimonial-text">
+              <p class="mb-3">{{ .testimonial }}</p>
+              <div class="text-accent">
+                {{ range seq .rating }}★{{ end }}
+              </div>
+            </div>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+{{ end }}

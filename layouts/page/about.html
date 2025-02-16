@@ -1,0 +1,31 @@
+{{ define "main" }}
+
+<main class="about-page">
+
+  <section class="about-hero py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+          
+          <h1 class="display-4 fw-bold mb-3">{{ .Title }}</h1>
+          <p class="lead">{{ .Params.subtitle }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="container py-6">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <div class="about-content">
+          
+          {{ .Content }}
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+{{ end }}

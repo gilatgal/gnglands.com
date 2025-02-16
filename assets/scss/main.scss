@@ -1,0 +1,466 @@
+// Font imports
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+
+// Theme variables
+:root {
+  // --primary: {{ .Site.Params.primaryColor }};
+  --primary: #456523;
+  --secondary: {{ .Site.Params.secondaryColor }};
+  // --accent: {{ .Site.Params.accentColor }};
+  --accent: #c3d151;
+  --font-heading: {{ .Site.Params.fontHeading }}, sans-serif;
+  --font-body: {{ .Site.Params.fontBody }}, serif;
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+body {
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+// Header styles
+// .header {
+//   .nav-link {
+//     color: var(--primary) !important;
+//     transition: all 0.3s ease;
+    
+//     .nav-underline {
+//       position: absolute;
+//       bottom: 0;
+//       left: 0;
+//       width: 0;
+//       height: 2px;
+//       background: var(--accent);
+//       transition: width 0.3s ease;
+//     }
+
+//     &:hover .nav-underline,
+//     &.active .nav-underline {
+//       width: 100%;
+//     }
+//   }
+// }
+
+
+
+$highlight: #456523; // Highlight color for hover/active states
+$navbar-bg: #fff;  // Navbar background color
+$navbar-shadow: rgba(0, 0, 0, 0.1); // Shadow for navbar
+
+// General header styles
+.header {
+  background-color: $navbar-bg;
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  box-shadow: 0 4px 10px $navbar-shadow; // Soft shadow for depth
+}
+
+// // Navbar styles
+// .navbar {
+//   // background-color: var(--primary); // Primary background color for navbar
+// }
+
+.navbar-dark {
+  .navbar-nav .nav-link {
+    // color: var(--accent); 
+    color: #000;
+    font-weight: 600; 
+    font-size: 1.2rem; 
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 0.8rem 1.2rem; 
+    transition: all 0.3s ease; 
+    // Underline styles
+    position: relative;
+
+    .nav-underline {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--accent);
+      transition: width 0.3s ease;
+    }
+
+    // Hover and active state styles
+    &:hover,
+    &.active {
+      color: $highlight; 
+      background-color: rgba(255, 255, 255, 0.1);
+      .nav-underline {
+        width: 100%; 
+        background-color: $highlight; 
+      }
+    }
+  }
+}
+
+
+.navbar-toggler {
+  border-color: var(--accent); // Toggler color matches accent
+}
+
+.navbar-toggler-icon {
+  background-color: var(--accent); 
+}
+
+// Responsive adjustments
+@media (max-width: 991px) {
+  .navbar-dark {
+    .navbar-nav .nav-link {
+      font-size: 1.4rem; 
+      padding: 1rem 1.5rem; 
+    }
+
+    .navbar-collapse {
+      background-color: var(--primary); 
+    }
+  }
+}
+
+// Focus styles for accessibility
+.navbar-nav .nav-link:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px $highlight; // Subtle glow on focus
+}
+
+
+// Hero section
+.hero {
+  height: 90vh;
+  min-height: 600px;
+  position: relative;
+
+  .gradient-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 100%);
+    z-index: 1;
+  }
+
+  .carousel-item {
+    height: 90vh;
+    min-height: 600px;
+    
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .carousel-caption {
+    z-index: 2;
+    bottom: 20%;
+    
+    h1 {
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      letter-spacing: -0.05em;
+    }
+  }
+
+  .btn-hero {
+    background-color: var(--accent) !important;
+    border: none;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+  }
+}
+
+// Property Cards
+.property-card {
+  border: 2px solid var(--accent);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+  
+
+  &:hover {// Theme variables
+:root {
+    --primary: {{ .Site.Params.primaryColor }};
+    --secondary: {{ .Site.Params.secondaryColor }};
+  }
+  
+  // Hero carousel
+  .hero-carousel {
+    .carousel-item {
+      height: 80vh;
+      min-height: 500px;
+      
+      img {
+        object-fit: cover;
+        height: 100%;
+      }
+      
+      .carousel-caption {
+        background: rgba(0,0,0,0.4);
+        padding: 2rem;
+        border-radius: 1rem;
+      }
+    }
+  }
+  
+  // Property cards
+  .property-card {
+    transition: transform 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-5px);
+      
+      .card-title {
+        color: var(--primary);
+      }
+    }
+    
+    .badge {
+      font-size: 0.8rem;
+    }
+    
+    .property-details {
+      color: var(--secondary);
+      font-size: 0.9rem;
+    }
+  }
+  
+  // Testimonials
+  .testimonial-card {
+    .bi-star-fill {
+      color: var(--secondary);
+    }
+  }
+    transform: translateY(-8px);
+    border-color: var(--primary);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+    
+    .card-img-top {
+      transform: scale(1.05);
+    }
+  }
+
+  .card-img-top {
+    transition: transform 0.3s ease;
+    height: 240px;
+    object-fit: cover;
+  }
+
+  .price {
+    color: var(--primary);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+
+  .property-meta {
+    color: var(--secondary);
+    font-size: 0.9rem;
+  }
+}
+
+// Testimonials
+.testimonial-card {
+  border-left: 4px solid var(--accent);
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  .testimonial-text {
+    position: relative;
+    padding-left: 1.5rem;
+
+    &::before {
+      content: "“";
+      position: absolute;
+      left: -1rem;
+      top: -1rem;
+      font-size: 4rem;
+      color: var(--accent);
+      opacity: 0.3;
+      font-family: var(--font-body);
+    }
+  }
+}
+
+
+.footer {
+  a {
+    transition: all 0.3s ease;
+    
+    &:hover {
+      color: var(--accent) !important;
+      text-decoration: underline;
+    }
+  }
+
+  .social-icons {
+    a {
+      font-size: 1.25rem;
+      padding: 0.5rem;
+      display: inline-block;
+      
+      &:hover {
+        transform: translateY(-3px);
+      }
+    }
+  }
+
+  .hover-accent {
+    &:hover {
+      color: var(--accent) !important;
+    }
+  }
+}
+
+.blog-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+
+    .card-title a {
+      color: var(--primary);
+    }
+  }
+
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .btn-link {
+    color: var(--primary);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.blog-hero {
+  img {
+    max-height: 400px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.blog-content {
+  img {
+    max-width: 100%;
+    height: auto;
+    margin: 1.5rem 0;
+    border-radius: 0.5rem;
+  }
+
+  h2, h3, h4 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+}
+
+
+.contact-hero, .about-hero {
+  background: linear-gradient(45deg, var(--primary), var(--secondary));
+}
+
+.contact-form {
+  .form-control {
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 1rem;
+    &:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.1);
+    }
+  }
+}
+
+.team-card {
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: translateY(-5px);
+    .card-title {
+      color: var(--primary);
+    }
+  }
+  .card-img-top {
+    height: 250px;
+    object-fit: cover;
+  }
+}
+
+
+//custom button 
+/* Custom button with primary color #456523 and thin black border */
+.btn-custom {
+  background-color: #456523; /* Custom primary color */
+  color: #000000; /* Black text */
+  border: 1px solid #000000; /* Thin black border */
+  padding: 0.375rem 0.75rem; /* Same padding as .btn-primary */
+  font-size: 1.2rem; /* Font size */
+  font-weight: 800; /* Regular weight (default for buttons in Bootstrap) */
+  text-align: center; /* Center align text */
+  border-radius: 0.25rem; /* Slightly rounded corners */
+  display: inline-block; /* Button display */
+  text-decoration: none; /* Remove underline */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: all 0.15s ease-in-out; /* Smooth transition */
+}
+
+/* Hover effect */
+.btn-custom:hover {
+  background-color: #3a541d; 
+  border-color: #000000; 
+  color: #c3d151; 
+  text-decoration: none; 
+}
+
+/* Focus effect for accessibility */
+.btn-custom:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem #c3d151; /* Blue outline on focus */
+}
+
+/* Active state */
+.btn-custom:active {
+  background-color: #3b4f1d; /* Darker primary color when button is pressed */
+  border-color: #000000; /* Keep the black border when active */
+  color: #c3d151; /* White text when active */
+}
+
+/* Disabled state */
+.btn-custom:disabled {
+  background-color: #b8daff; /* Light blue for disabled */
+  border-color: #b8daff; /* Border matches background */
+  color: #6c757d; /* Gray text */
+  cursor: not-allowed; /* No cursor on disabled */
+}
+
+
+.text-custom-primary {
+  color: #c3d151 !important; 
+}
+
+.bg-custom-primary {
+  background-color: #456523 !important; 
+}

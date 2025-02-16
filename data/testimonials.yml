@@ -1,0 +1,17 @@
+- name: Sarah Johnson
+  position: Home Buyer
+  testimonial: "The best real estate experience I've ever had. Professional service and amazing support throughout the process."
+  rating: 5
+  image: "https://randomuser.me/api/portraits/women/1.jpg"
+
+- name: Michael Chen
+  position: Property Investor
+  testimonial: "Their market knowledge helped me make the right investment decisions. Highly recommended!"
+  rating: 5
+  image: "https://randomuser.me/api/portraits/men/1.jpg"
+
+- name: Emily Rodriguez
+  position: First-time Buyer
+  testimonial: "Made the whole process stress-free and enjoyable. Found my perfect home within a week!"
+  rating: 5
+  image: "https://randomuser.me/api/portraits/women/2.jpg"

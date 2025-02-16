@@ -1,0 +1,27 @@
+<article class="blog-card card h-100 border-0 shadow-sm">
+    <img src="{{ .Params.featured_image  }}" 
+         class="card-img-top" 
+         alt="{{ .Title }}" 
+         loading="lazy">
+    <div class="card-body">
+      <div class="text-muted small mb-3">
+        <span class="me-3">
+          <i class="fas fa-calendar-alt me-1"></i>
+          {{ .Date.Format "January 2, 2006" }}
+        </span>
+        <span>
+          <i class="fas fa-user me-1"></i>
+          {{ .Params.author | default "Admin" }}
+        </span>
+      </div>
+      <h3 class="h5 card-title mb-3">
+        <a href="{{ .RelPermalink }}" class="text-decoration-none text-dark hover-primary">
+          {{ .Title }}
+        </a>
+      </h3>
+      <p class="card-text">{{ .Summary | truncate 150 }}</p>
+      <a href="{{ .RelPermalink }}" class="btn btn-link text-decoration-none">
+        Read More <i class="fas fa-arrow-right ms-2"></i>
+      </a>
+    </div>
+  </article>

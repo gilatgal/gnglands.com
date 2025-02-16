@@ -1,0 +1,41 @@
+baseURL = "https://gnglands.com"
+languageCode = "en-us"
+title = "GNGLANDS"
+
+[params]
+
+description = "Premium real estate services with curated luxury properties"
+logo = "/images/logo.png"
+address = "123 Luxury Avenue, New York, NY"
+phone = "+14804055707"
+email = "office@gnglands.com"
+
+
+
+currency = "$"
+areaUnit = "sq.ft."
+
+
+formaction = "/"
+
+[params.nav]
+logo = "images/logo.png"
+menu = [
+    {name = "Home", url = "/"},
+    {name = "All Properties", url = "/properties"},
+    {name = "About", url = "/about"},
+    {name = "Blog", url = "/blog"},
+    {name = "Contact", url = "/contact"}
+]
+
+[params.social]
+  whatsapp = "https://wa.me/+972546675544"
+  sms = "+14804055707"
+  facebook = "https://m.me/gilat.gal"
+  email = "office@gnglands.com"
+
+
+[taxonomies]
+  state = "state"
+
+

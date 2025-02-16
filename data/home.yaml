@@ -1,0 +1,13 @@
+hero:
+  slides:
+    - image: "https://picsum.photos/seed/apartment/1920/1080"
+      heading: "Discover Your Dream Home"
+      subtitle: "Premium properties in prime locations"
+      buttonText: "Browse Listings"
+      buttonLink: "/properties"
+    - image: "https://picsum.photos/1920/1080"
+      heading: "Expert Property Management"
+      subtitle: "Trusted by thousands of homeowners"
+      buttonText: "Our Services"
+      buttonLink: "/services"
+
