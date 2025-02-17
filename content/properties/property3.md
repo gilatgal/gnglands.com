@@ -1,22 +1,25 @@
 ---
-title: "Prairie Homestead"
-price: 67500
-location: "Kiowa County, CO"
-propertyType: "Agricultural Land"
-status: "Owner Financed"
-acres: 40.00
-apn: "800-12726-000"
-downPayment: 137.00
-monthlyPayment: 137.00
-months: 42
-noPaymentsPrice: 2680.00
-state: "Colorado"
+title: "Horseshoe bend, ready to build"
+price: 2,990 or $149 x 24m
+location: "Izard County, AR"
+propertyType: "Residential Land"
+status: "Payments or Cash"
+acres: 0.34
+apn: "800-09093-000"
+downPayment: 149.00
+monthlyPayment: 149.00
+months: 24
+CashPrice: 2,990.00
+state: "Arkansas"
 featured: true
-featured_image: "https://picsum.photos/1920/1080"
+featured_image: "/images/Izard_Yaniv/800-09093-000/Screenshot 2025-02-08 140315.png"
 gallery:
-  - "https://picsum.photos/1920/1080"
-  - "https://picsum.photos/1920/1080"
-  - "https://picsum.photos/1920/1080"
+  - "/images/Izard_Yaniv/800-09093-000/Screenshot 2025-02-08 140315.png"
+  - "/images/Izard_Yaniv/800-09093-000/Screenshot 2025-02-08 140636.png"
+  - "/images/Izard_Yaniv/800-09093-000/Screenshot 2025-02-08 141358.png"
+  - "/images/Izard_Yaniv/800-09093-000/Screenshot 2025-02-17 163730.png"
 ---
 
-40-acre flat prairie land perfect for grazing or crops. Good road access and electricity at property line. Owner financing available with 10% down. Low property taxes and unrestricted use.
+This 0.34-acre parcel corner lot in Izard County offers a stunning opportunity. 
+Owner financing available with low down payment. 
+Utilities available at road. Perfect for building a house or long-term investment.

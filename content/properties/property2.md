@@ -1,22 +1,28 @@
 ---
-title: "Pine Creek Acreage"
-price: 145000
-location: "Coconino County, AZ"
-propertyType: "Mountain Land"
-status: "Cash Only"
-acres: 12.75
-apn: "800-12726-000"
-downPayment: 137.00
-monthlyPayment: 137.00
-months: 42
-noPaymentsPrice: 2680.00
-state: "Colorado"
+title: "Horseshoe bend, ready to build"
+price: 2,590 or $129 x 24m
+location: "Izard County, AR"
+propertyType: "Residential Land"
+status: "Payments or Cash"
+acres: 0.33
+apn: "800-10439-000"
+downPayment: 129.00
+monthlyPayment: 129.00
+months: 24
+CashPrice: 2,590.00
+state: "Arkansas"
 featured: true
-featured_image: "https://picsum.photos/1920/1080"
+featured_image: "/images/Izard_Paul/800-10439-000/Screenshot 2025-02-11 150337.png"
 gallery:
-  - "https://picsum.photos/1920/1080"
-  - "https://picsum.photos/1920/1080"
-  - "https://picsum.photos/1920/1080"
+  - "/images/Izard_Paul/800-10439-000/Screenshot 2025-02-11 150337.png"
+  - "/images/Izard_Paul/800-10439-000/Screenshot 2025-02-11 155849.png"
+  - "/images/Izard_Paul/800-10439-000/Screenshot 2025-02-11 145840.png"
+  - "/images/Izard_Paul/800-10439-000/Screenshot 2025-02-11 145222.png"
+  - "/images/Izard_Paul/800-10439-000/Screenshot 2025-02-11 145543.png"
+  - "/images/Izard_Paul/800-10439-000/Screenshot 2025-02-11 144328.png"
+  - "/images/Izard_Paul/800-10439-000/Screenshot 2025-02-11 144514.png"
 ---
 
-Beautiful 12.75-acre mountain property surrounded by Ponderosa pines. Gentle slope with seasonal creek. Includes drilled well permit. Located in prime recreational area near national forest.
+This 0.33-acre parcel in Izard County offers a stunning opportunity. 
+Owner financing available with low down payment. 
+Utilities available at road. Perfect for building a house or long-term investment.
