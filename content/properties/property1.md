@@ -1,22 +1,27 @@
 ---
-title: "Desert Vista Ranch"
-price: 89500
-location: "Luna County, NM"
-propertyType: "Rural Land"
-status: "Owner Financed"
-acres: 18.20
-apn: "800-12726-000"
-downPayment: 137.00
-monthlyPayment: 137.00
-months: 42
-noPaymentsPrice: 2680.00
-state: "mexico"
+title: "Horseshoe bend, ready to build"
+price: 2,990 or $149 x 24m
+location: "Izard County, AZ"
+propertyType: "Residential Land"
+status: "Payments or Cash"
+acres: 0.33
+apn: "800-02517-000"
+downPayment: 149.00
+monthlyPayment: 149.00
+months: 24
+CashPrice: 2,990.00
+state: "Arkansas"
 featured: true
-featured_image: "https://picsum.photos/1920/1080"
+featured_image: "/images/800-02517-000/Screenshot 2025-02-11 160531.png"
 gallery:
-  - "https://picsum.photos/1920/1080"
-  - "https://picsum.photos/1920/1080"
-  - "https://picsum.photos/1920/1080"
+  - "/images/800-02517-000/800-02517-000   Land-ID - Area 3D_try1.png"
+  - "/images/800-02517-000/800-02517-000   Zoom -3D.png"
+  - "/images/800-02517-000/800-02517-000  land-id -Area main.png"
+  - "/images/800-02517-000/Screenshot 2025-01-31 121107.png"
+  - "/images/800-02517-000/Screenshot 2025-02-11 160531.png"
+  - "/images/800-02517-000/Screenshot 2025-02-11 161359.png"
 ---
 
-This 18.2-acre parcel in Luna County offers stunning desert vistas and complete privacy. Owner financing available with low down payment. Utilities available at road. Perfect for off-grid living or long-term investment.
+This 0.33-acre parcel in Izard County offers a stunning opportunity. 
+Owner financing available with low down payment. 
+Utilities available at road. Perfect for building a house or long-term investment.

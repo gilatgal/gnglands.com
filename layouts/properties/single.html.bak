@@ -76,7 +76,7 @@
                       <strong>Monthly Payment:</strong> ${{ .Params.monthlyPayment }}
                     </div>
                     <div class="col-6">
-                      <strong>Month Term:</strong> {{ .Params.months }}
+                      <strong>Month term:</strong> {{ .Params.months }}
                     </div>
                     <div class="col-6">
                       <strong>Cash Price:</strong> ${{ .Params.noPaymentsPrice }}
