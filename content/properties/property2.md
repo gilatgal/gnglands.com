@@ -1,6 +1,6 @@
 ---
 title: "Horseshoe bend, ready to build"
-price: 2,590 or $129 x 24m
+price: 129 x 24
 location: "Izard County, AR"
 propertyType: "Residential Land"
 status: "Payments or Cash"

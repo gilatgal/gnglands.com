@@ -1,6 +1,6 @@
 ---
 title: "Seligman, own, camp or build"
-price: 8,990 or $199 x 48m
+price: 199 x 48
 location: "Yavapai County, AZ"
 propertyType: "Residential Acreage"
 status: "Payments or Cash"
