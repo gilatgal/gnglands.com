@@ -1,0 +1,11 @@
+<span style="font-size: {{ .Get "size" }};">
+    {{ .Inner | markdownify }}
+</span>
+
+{{/* <!--
+Note:
+embed this in the .md file:
+{{< enlarge size="1.5em" >}}
+...within only regular text lines are enlarged without the markeddown formatted text lines...
+{{< /enlarge >}}
+--> */}}

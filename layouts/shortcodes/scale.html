@@ -1,0 +1,11 @@
+<div style="font-size: {{ .Get "scale" }};">
+    {{ .Inner | markdownify }}
+</div>
+
+{{/* <!--
+Note:
+embed this in the .md file:
+{{< scale scale="120%" >}}
+...within only regular text lines are enlarged without the markeddown formatted text lines...
+{{< /scale >}}
+--> */}}
