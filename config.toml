@@ -22,6 +22,10 @@ formaction = "/"
 logo = "images/logo.png"
 menu = [
     {name = "Home", url = "/"},
+    {name = "Location", url = "#", children = [
+    {name = "Arkanas", url = "/state/arkansas"},
+    {name = "Arizona", url = "/state/arizona"}
+  ]},
     {name = "All Properties", url = "/properties"},
     {name = "About", url = "/about"},
     {name = "Blog", url = "/blog"},
@@ -38,4 +42,18 @@ menu = [
 [taxonomies]
   state = "state"
 
+[params.footer] #footer menu
+menu = [
+    {name = "Home", url = "/"},
+    {name = "All Properties", url = "/properties"},
+    {name = "About", url = "/about"},
+    {name = "Blog", url = "/blog"},
+    {name = "Contact", url = "/contact"},
+    {name = "Privacy Policy", url = "/privacy-policy"},
+    {name = "Refund Policy", url = "/refund-policy"}
+]
 
+menuSecondary = [
+    {name = "Arkanas", url = "/state/arkansas"},
+    {name = "Arizona", url = "/state/arizona"}
+]
