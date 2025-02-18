@@ -21,6 +21,7 @@
           <div class="card shadow-sm border-0">
             <div class="card-body p-5">
               <form id="contactForm"  method="POST" name="contact-form" data-netlify="true" >
+                <input type="hidden" name="property_apn" id="property_apn">
                 <div class="mb-4">
                   <label for="name" class="form-label">Full Name</label>
                   <input type="text" name="name" class="form-control" id="name" placeholder="John Doe" required>
@@ -37,11 +38,19 @@
                   <label for="message" class="form-label">Message</label>
                   <textarea name="message" class="form-control" id="message" rows="5" placeholder="Your message..." required></textarea>
                 </div>
+                <div class="mb-4 form-check my-2">
+                  <input type="checkbox" class="form-check-input" id="marketingConsent" name="marketingConsent" required>
+                  <label class="form-check-label" for="marketingConsent">
+                    I agree to receive marketing and customer service calls and text messages from GNGLANDS <a href="/privacy-policy" class="text-decoration-none">Privacy Policy</a>.
+                  </label>
+                </div>
                 <div class="d-grid">
                   <button type="submit" class="btn btn-custom btn-lg">
                     <i class="fas fa-paper-plane me-2"></i>Send Message
                   </button>
                 </div>
+
+
               </form>
             </div>  
           </div>
@@ -87,6 +96,16 @@
     </div>
   </div>
 </section>
+
+<script>
+  // Function to get URL parameters
+  function getURLParameter(name) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+  }
+
+  document.getElementById('property_apn').value = getURLParameter('apn');
+</script>
 
 
   </main>
