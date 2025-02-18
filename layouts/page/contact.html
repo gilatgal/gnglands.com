@@ -67,7 +67,8 @@
         <div class="p-4 bg-white rounded-3 shadow-sm">
           <i class="fas fa-map-marker-alt fa-3x text-custom-primary mb-3"></i>
           <h4 class="h5 fw-bold">Our Office</h4>
-          <p class="text-muted mb-0">{{ .Site.Params.address }}</p>
+          <!-- <p class="text-muted mb-0">{{ .Site.Params.address }}</p> -->
+          <p class="text-muted mb-0">{{ replace .Site.Params.address "Phoenix" "<br>Phoenix" | safeHTML }}</p>
         </div>
       </div>
       
@@ -76,10 +77,17 @@
         <div class="p-4 bg-white rounded-3 shadow-sm">
           <i class="fas fa-phone fa-3x text-custom-primary mb-3"></i>
           <h4 class="h5 fw-bold">Call Us</h4>
-          <p class="text-muted mb-0 ">
-            <a   class="text-decoration-none text-muted" href="tel:{{ .Site.Params.phone }}">{{ .Site.Params.phone }}</a>
-          </p>
-        </div>
+		  
+          <!-- 
+		  <p class="text-muted mb-0 " >
+            <a class="text-decoration-none text-muted" href="tel:{{ .Site.Params.phone }}">{{ .Site.Params.phone }}</a></p>
+          <h3 class="mb-0">
+            <a class="text-decoration-none" href="tel:{{ .Site.Params.phone }}" style="color: darkblue;">{{ .Site.Params.phone }}</a></h3>
+          -->
+          <p style="font-size: 20px;">
+            <a style="color: #00008B; text-decoration: none; font-size: 20px;" href="tel:{{ .Site.Params.phone }}">{{ .Site.Params.phone }}</a>
+           </p>
+       </div>
       </div>
       
       <!-- Email Address -->
@@ -87,9 +95,15 @@
         <div class="p-4 bg-white rounded-3 shadow-sm">
           <i class="fas fa-envelope fa-3x text-custom-primary mb-3"></i>
           <h4 class="h5 fw-bold">Email Us</h4>
+          <!-- 
           <p class="text-muted mb-0 text-decoration-none">
             <a class="text-decoration-none text-muted" href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
+	      -->		
+          <p style="font-size: 20px;">
+            <a style="color: #00008B; text-decoration: none; font-size: 20px;" href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
+
           </p>
+
         </div>
       </div>
       
