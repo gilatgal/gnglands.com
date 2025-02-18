@@ -53,3 +53,7 @@ menu = [
     {name = "Refund Policy", url = "/refund-policy"}
 ]
 
+menuSecondary = [
+    {name = "Arkanas", url = "/state/arkansas"},
+    {name = "Arizona", url = "/state/arizona"}
+]

@@ -43,6 +43,21 @@
               </ul>
           </div>
 
+          <div class="col-lg-3">
+            <h5 class="text-custom-primary mb-3">Locations</h5>
+            <ul class="list-unstyled">
+                {{ range .Site.Params.footer.menuSecondary }}
+                <li class="mb-2">
+                    <a href="{{ .url }}" class="text-white text-decoration-none hover-accent">
+                        {{ .name }}
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+
+          
+
           <div class="col-lg-3"> 
               <h5 class="text-custom-primary mb-3">Contact</h5>
               <ul class="list-unstyled">
