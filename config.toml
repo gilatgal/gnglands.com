@@ -35,7 +35,8 @@ menu = [
 [params.social]
   whatsapp = "https://wa.me/+972546675544"
   sms = "+14804055707"
-  facebook = "https://m.me/gilat.gal"
+  #facebook = "https://m.me/gilat.gal"
+  facebook = "https://m.me/gnglands"
   email = "office@gnglands.com"
 
 
