@@ -39,17 +39,23 @@
       </div>
     </section>
 	
-	            <div class="d-grid">
-                  <a href="/contact" class="btn btn-custom btn-lg">
-                    <i class="fas fa-phone me-2"></i>
-                    Contact Us
-                  </a>
-                </div>
+    <!-- contact us -->
+    <section class="bg-light py-6">
+      <div class="container">
+	      <div class="d-grid">
+              <a href="/contact" class="btn btn-custom btn-lg">
+                 <i class="fas fa-phone me-2"></i>
+                  Contact Us
+              </a>
+          </div>
+      </div>
+    </section>
 
     <!-- Related Posts -->
     <section class="bg-light py-6">
       <div class="container">
-        <h2 class="h4 fw-bold mb-4">Related Posts:</h2>
+       <h2 class="h4 fw-bold mb-4"></h2>
+       <h2 class="h4 fw-bold mb-4">Related Posts:</h2>
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
           {{ range first 3 (where (where .Site.Pages "Type" "blog") "Title" "!=" .Title) }}
           {{ if .Content }} <!-- Ensure it has content -->
