@@ -1,7 +1,7 @@
 ---
 title: "Discover Your Dream: Owning Land in Horseshoe Bend, Izard County, Arkansas"
 date: 2025-02-12
-author: "John Doe"
+author: "GNGLANDS"
 #featured_image: "/images/Izard_Horseshoe/Picture1.png"
 featured_image: "/images/Izard_Horseshoe/800-02517-000_Attractions6.jpg"
 
